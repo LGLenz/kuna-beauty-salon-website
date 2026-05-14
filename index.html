@@ -1,0 +1,2241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#4a1942" />
+    <title>Kuna's Beauty Salon — Where Beauty Meets Luxury | KUSH Beauty Shop, Kenya</title>
+    <meta
+      name="description"
+      content="Kuna's Beauty Salon, also known as KUSH Beauty Shop and Kushy's Beauty Haven, is a premium beauty and wellness destination in Kenya founded by Inviolata Kuna Taaban. Haircare, skincare, nail services, and spa treatments crafted with luxury and care."
+    />
+    <meta name="author" content="Inviolata Kuna Taaban" />
+    <meta
+      name="keywords"
+      content="Kuna's Beauty Salon, KUSH Beauty Shop, Kushy's Beauty Haven, beauty salon Kenya, Nairobi spa, hair salon Kenya, nail services, skincare, Inviolata Kuna Taaban"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_KE" />
+    <meta property="og:site_name" content="Kuna's Beauty Salon" />
+    <meta property="og:title" content="Kuna's Beauty Salon — Where Beauty Meets Luxury" />
+    <meta
+      property="og:description"
+      content="A premium beauty and wellness sanctuary in Kenya. Haircare, skincare, nails, and spa rituals by founder Inviolata Kuna Taaban."
+    />
+    <meta property="og:url" content="https://kunasbeautysalon.co.ke/" />
+    <meta property="og:image" content="https://kunasbeautysalon.co.ke/og-cover.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kuna's Beauty Salon — Where Beauty Meets Luxury" />
+    <meta
+      name="twitter:description"
+      content="Premium beauty and wellness in Kenya. Haircare, skincare, nails, spa. Founded by Inviolata Kuna Taaban."
+    />
+
+    <!-- Favicon (inline SVG) -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%234a1942'/><path d='M10 8v16M10 16l8-8M10 16l8 8' stroke='%23c9967a' stroke-width='2.2' stroke-linecap='round' fill='none'/><circle cx='22' cy='8' r='2' fill='%23c9967a'/></svg>"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Nunito:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "Kuna's Beauty Salon",
+        "alternateName": ["KUSH Beauty Shop", "Kushy's Beauty Haven"],
+        "founder": "Inviolata Kuna Taaban",
+        "image": "https://kunasbeautysalon.co.ke/og-cover.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kuna Plaza, Ngong Road",
+          "addressLocality": "Nairobi",
+          "addressCountry": "KE"
+        },
+        "telephone": "+254-700-000-000",
+        "priceRange": "KES 800 – KES 6,500",
+        "openingHours": "Mo-Sa 09:00-19:00"
+      }
+    </script>
+
+    <style>
+      /* ---------- Tokens ---------- */
+      :root {
+        --rose-gold: #c9967a;
+        --rose-gold-deep: #a87859;
+        --plum: #4a1942;
+        --plum-deep: #341030;
+        --plum-soft: #6a2962;
+        --cream: #fdf6f0;
+        --cream-warm: #f6ead9;
+        --ink: #2a1226;
+        --ink-soft: #5b4a55;
+        --line: rgba(74, 25, 66, 0.12);
+        --line-strong: rgba(74, 25, 66, 0.22);
+        --shadow-sm: 0 1px 2px rgba(74, 25, 66, 0.06), 0 2px 8px rgba(74, 25, 66, 0.04);
+        --shadow-md: 0 6px 18px rgba(74, 25, 66, 0.10), 0 2px 6px rgba(74, 25, 66, 0.06);
+        --shadow-lg: 0 18px 40px rgba(74, 25, 66, 0.18), 0 6px 14px rgba(74, 25, 66, 0.08);
+        --radius-sm: 6px;
+        --radius: 14px;
+        --radius-lg: 22px;
+        --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+        --container: 1180px;
+        --font-display: "Cormorant Garamond", "Times New Roman", Georgia, serif;
+        --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+
+      /* ---------- Reset & Base ---------- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.65;
+        font-weight: 400;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        overflow-x: hidden;
+      }
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: var(--plum);
+        text-decoration: none;
+        transition: color 0.25s var(--ease);
+      }
+      a:hover {
+        color: var(--rose-gold-deep);
+      }
+      :focus-visible {
+        outline: 2px solid var(--rose-gold);
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-display);
+        font-weight: 500;
+        color: var(--plum);
+        letter-spacing: -0.005em;
+        line-height: 1.12;
+        margin: 0 0 0.6em;
+      }
+      h1 {
+        font-size: clamp(2.5rem, 5.5vw + 0.5rem, 4.6rem);
+        font-weight: 500;
+      }
+      h2 {
+        font-size: clamp(2rem, 3.4vw + 0.6rem, 3rem);
+      }
+      h3 {
+        font-size: clamp(1.35rem, 1.2vw + 0.9rem, 1.7rem);
+      }
+      p {
+        margin: 0 0 1em;
+        color: var(--ink-soft);
+      }
+      ::selection {
+        background: var(--rose-gold);
+        color: var(--cream);
+      }
+
+      .container {
+        width: 100%;
+        max-width: var(--container);
+        margin: 0 auto;
+        padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+      }
+      section {
+        padding-block: clamp(4rem, 8vw, 7rem);
+      }
+      .eyebrow {
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 0.78rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--rose-gold-deep);
+        margin: 0 0 1rem;
+      }
+      .section-head {
+        max-width: 720px;
+        margin: 0 auto 3rem;
+        text-align: center;
+      }
+      .section-head p {
+        font-size: 1.05rem;
+      }
+      .divider {
+        width: 56px;
+        height: 1px;
+        background: var(--rose-gold);
+        margin: 1.25rem auto;
+        position: relative;
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--rose-gold);
+        transform: translateY(-50%);
+      }
+      .divider::before {
+        left: -14px;
+      }
+      .divider::after {
+        right: -14px;
+      }
+
+      /* ---------- Buttons ---------- */
+      .btn {
+        --bg: var(--plum);
+        --fg: var(--cream);
+        --br: var(--plum);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        font-family: var(--font-body);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        font-size: 0.95rem;
+        padding: 0.95rem 1.7rem;
+        border: 1px solid var(--br);
+        background: var(--bg);
+        color: var(--fg);
+        border-radius: 999px;
+        cursor: pointer;
+        transition: transform 0.35s var(--ease), background 0.3s var(--ease),
+          color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+        box-shadow: var(--shadow-sm);
+      }
+      .btn:hover {
+        background: var(--rose-gold);
+        border-color: var(--rose-gold);
+        color: var(--plum-deep);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .btn--ghost {
+        --bg: transparent;
+        --fg: var(--cream);
+        --br: rgba(253, 246, 240, 0.55);
+      }
+      .btn--ghost:hover {
+        background: var(--cream);
+        color: var(--plum);
+        border-color: var(--cream);
+      }
+      .btn--solid-rose {
+        --bg: var(--rose-gold);
+        --fg: var(--plum-deep);
+        --br: var(--rose-gold);
+      }
+      .btn--solid-rose:hover {
+        background: var(--plum);
+        color: var(--cream);
+        border-color: var(--plum);
+      }
+
+      /* ---------- Header ---------- */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: rgba(253, 246, 240, 0.82);
+        backdrop-filter: saturate(140%) blur(14px);
+        -webkit-backdrop-filter: saturate(140%) blur(14px);
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+      }
+      .site-header.scrolled {
+        border-color: var(--line);
+        background: rgba(253, 246, 240, 0.94);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 1rem;
+        gap: 1rem;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        color: var(--plum);
+      }
+      .brand:hover {
+        color: var(--plum);
+      }
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        flex: none;
+      }
+      .brand-name {
+        font-family: var(--font-display);
+        font-size: 1.35rem;
+        font-weight: 600;
+        line-height: 1;
+      }
+      .brand-sub {
+        display: block;
+        font-family: var(--font-body);
+        font-size: 0.62rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--rose-gold-deep);
+        margin-top: 4px;
+      }
+      .nav-links {
+        display: none;
+        gap: 2rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .nav-links a {
+        font-size: 0.92rem;
+        font-weight: 500;
+        color: var(--ink);
+        position: relative;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        height: 1px;
+        background: var(--rose-gold);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s var(--ease);
+      }
+      .nav-links a:hover::after {
+        transform: scaleX(1);
+      }
+      .nav-cta {
+        display: none;
+      }
+      .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        background: transparent;
+        border: 1px solid var(--line-strong);
+        border-radius: 999px;
+        cursor: pointer;
+      }
+      .nav-toggle span {
+        display: block;
+        width: 18px;
+        height: 1.5px;
+        background: var(--plum);
+        margin-inline: auto;
+        transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+      }
+      .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(6.5px) rotate(45deg);
+      }
+      .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+      }
+      .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-6.5px) rotate(-45deg);
+      }
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 1rem 0 1.5rem;
+        border-top: 1px solid var(--line);
+      }
+      .mobile-menu.open {
+        display: flex;
+      }
+      .mobile-menu a {
+        padding: 0.85rem 0.25rem;
+        font-weight: 500;
+        border-bottom: 1px solid var(--line);
+      }
+      .mobile-menu .btn {
+        margin-top: 1rem;
+        align-self: flex-start;
+      }
+
+      @media (min-width: 880px) {
+        .nav-links {
+          display: flex;
+        }
+        .nav-cta {
+          display: inline-flex;
+        }
+        .nav-toggle {
+          display: none;
+        }
+        .mobile-menu {
+          display: none !important;
+        }
+      }
+
+      /* ---------- Hero ---------- */
+      .hero {
+        position: relative;
+        min-height: 100svh;
+        padding-block: clamp(5rem, 10vh, 7rem);
+        display: flex;
+        align-items: center;
+        color: var(--cream);
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(60% 60% at 80% 20%, rgba(201, 150, 122, 0.55), transparent 60%),
+          radial-gradient(70% 70% at 15% 85%, rgba(106, 41, 98, 0.55), transparent 65%),
+          linear-gradient(135deg, var(--plum-deep) 0%, var(--plum) 55%, #3d1638 100%);
+        z-index: -2;
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle at 20% 30%, rgba(253, 246, 240, 0.07) 0 1px, transparent 2px),
+          radial-gradient(circle at 80% 70%, rgba(201, 150, 122, 0.08) 0 1px, transparent 2px);
+        background-size: 36px 36px, 48px 48px;
+        opacity: 0.6;
+        z-index: -1;
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: center;
+      }
+      @media (min-width: 960px) {
+        .hero-grid {
+          grid-template-columns: 1.15fr 0.85fr;
+        }
+      }
+      .hero-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: var(--rose-gold);
+        margin-bottom: 1.5rem;
+      }
+      .hero-eyebrow::before {
+        content: "";
+        width: 32px;
+        height: 1px;
+        background: var(--rose-gold);
+      }
+      .hero h1 {
+        color: var(--cream);
+        font-weight: 400;
+        margin: 0 0 1.25rem;
+        max-width: 14ch;
+      }
+      .hero h1 em {
+        font-style: italic;
+        color: var(--rose-gold);
+        font-weight: 500;
+      }
+      .hero-lead {
+        color: rgba(253, 246, 240, 0.82);
+        font-size: clamp(1.05rem, 0.6vw + 0.95rem, 1.2rem);
+        max-width: 52ch;
+        margin: 0 0 2.25rem;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.85rem;
+        margin-bottom: 2.5rem;
+      }
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem 2.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(253, 246, 240, 0.18);
+        max-width: 540px;
+      }
+      .hero-meta div {
+        min-width: 120px;
+      }
+      .hero-meta dt {
+        font-size: 0.7rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--rose-gold);
+        margin-bottom: 0.35rem;
+      }
+      .hero-meta dd {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 1.4rem;
+        color: var(--cream);
+      }
+
+      /* Hero ornament */
+      .hero-ornament {
+        position: relative;
+        aspect-ratio: 4 / 5;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid rgba(253, 246, 240, 0.18);
+        background:
+          radial-gradient(120% 80% at 50% 0%, rgba(201, 150, 122, 0.35), transparent 60%),
+          linear-gradient(160deg, rgba(106, 41, 98, 0.6), rgba(52, 16, 48, 0.85));
+        display: grid;
+        place-items: center;
+      }
+      .hero-ornament::before {
+        content: "";
+        position: absolute;
+        inset: 14px;
+        border: 1px solid rgba(201, 150, 122, 0.45);
+        border-radius: calc(var(--radius-lg) - 6px);
+        pointer-events: none;
+      }
+      .hero-ornament svg {
+        width: 78%;
+        height: auto;
+        opacity: 0.95;
+        animation: drift 14s var(--ease) infinite alternate;
+      }
+      @keyframes drift {
+        from {
+          transform: translateY(-6px) rotate(-1deg);
+        }
+        to {
+          transform: translateY(6px) rotate(1deg);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-ornament svg {
+          animation: none;
+        }
+        html {
+          scroll-behavior: auto;
+        }
+      }
+
+      /* ---------- Marquee strip ---------- */
+      .strip {
+        background: var(--plum);
+        color: var(--cream);
+        padding: 1rem 0;
+        overflow: hidden;
+      }
+      .strip-inner {
+        display: flex;
+        gap: 3rem;
+        white-space: nowrap;
+        animation: scroll 38s linear infinite;
+        font-family: var(--font-display);
+        font-style: italic;
+        font-size: 1.05rem;
+      }
+      .strip-inner span {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      .strip-inner span::after {
+        content: "✦";
+        color: var(--rose-gold);
+      }
+      @keyframes scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .strip-inner {
+          animation: none;
+        }
+      }
+
+      /* ---------- Services ---------- */
+      .services {
+        background: var(--cream);
+      }
+      .services-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 720px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 1080px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .service-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 2rem 2rem 1.75rem;
+        position: relative;
+        transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
+          border-color 0.4s var(--ease);
+      }
+      .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: rgba(201, 150, 122, 0.55);
+      }
+      .service-card-head {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+      }
+      .service-icon {
+        flex: none;
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(140deg, var(--rose-gold) 0%, #e0b89d 100%);
+        color: var(--plum-deep);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+      }
+      .service-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+      .service-card h3 {
+        margin: 0;
+        font-size: 1.55rem;
+      }
+      .service-card .lead {
+        color: var(--ink-soft);
+        font-size: 0.95rem;
+        margin: 0 0 1.25rem;
+      }
+      .price-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px dashed var(--line-strong);
+      }
+      .price-list li {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 0.85rem 0;
+        border-bottom: 1px dashed var(--line);
+      }
+      .price-list li:last-child {
+        border-bottom: 0;
+      }
+      .price-list .name {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .price-list .desc {
+        display: block;
+        font-size: 0.82rem;
+        color: var(--ink-soft);
+        margin-top: 2px;
+        font-weight: 400;
+      }
+      .price-list .price {
+        font-family: var(--font-display);
+        font-size: 1.15rem;
+        color: var(--plum);
+        white-space: nowrap;
+        font-weight: 500;
+      }
+      .service-foot {
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+        color: var(--rose-gold-deep);
+        font-style: italic;
+      }
+
+      /* ---------- Gallery ---------- */
+      .gallery {
+        background: linear-gradient(180deg, var(--cream) 0%, var(--cream-warm) 100%);
+      }
+      .gallery-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (min-width: 720px) {
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.25rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .gallery-grid {
+          grid-template-columns: repeat(6, 1fr);
+          grid-auto-rows: 160px;
+        }
+      }
+      .tile {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        aspect-ratio: 1;
+        border: 1px solid var(--line);
+        cursor: default;
+        transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+      }
+      @media (min-width: 1024px) {
+        .tile {
+          aspect-ratio: auto;
+        }
+        .tile.tall {
+          grid-row: span 2;
+        }
+        .tile.wide {
+          grid-column: span 2;
+        }
+      }
+      .tile:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+      }
+      .tile-art {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: rgba(253, 246, 240, 0.95);
+      }
+      .tile-art svg {
+        width: 50%;
+        max-width: 110px;
+        height: auto;
+        opacity: 0.85;
+      }
+      .tile-1 .tile-art {
+        background: linear-gradient(150deg, #4a1942 0%, #6a2962 100%);
+      }
+      .tile-2 .tile-art {
+        background: linear-gradient(150deg, #c9967a 0%, #e6c2a8 100%);
+        color: var(--plum-deep);
+      }
+      .tile-3 .tile-art {
+        background: linear-gradient(150deg, #341030 0%, #4a1942 100%);
+      }
+      .tile-4 .tile-art {
+        background: linear-gradient(150deg, #f6ead9 0%, #fdf6f0 100%);
+        color: var(--plum);
+      }
+      .tile-5 .tile-art {
+        background: linear-gradient(150deg, #6a2962 0%, #c9967a 100%);
+      }
+      .tile-6 .tile-art {
+        background: linear-gradient(150deg, #c9967a 0%, #4a1942 100%);
+      }
+      .tile-7 .tile-art {
+        background: linear-gradient(150deg, #4a1942 0%, #c9967a 100%);
+      }
+      .tile-8 .tile-art {
+        background: linear-gradient(150deg, #fdf6f0 0%, #c9967a 100%);
+        color: var(--plum-deep);
+      }
+      .tile-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1rem 1.1rem;
+        background: linear-gradient(180deg, transparent, rgba(52, 16, 48, 0.78));
+        color: var(--cream);
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .tile-caption strong {
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 1.05rem;
+      }
+      .tile-caption span {
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rose-gold);
+      }
+      .tile-2 .tile-caption,
+      .tile-4 .tile-caption,
+      .tile-8 .tile-caption {
+        background: linear-gradient(180deg, transparent, rgba(74, 25, 66, 0.72));
+      }
+      .gallery-note {
+        text-align: center;
+        margin-top: 2rem;
+        font-style: italic;
+        color: var(--ink-soft);
+      }
+
+      /* ---------- About ---------- */
+      .about {
+        background: var(--cream);
+      }
+      .about-grid {
+        display: grid;
+        gap: clamp(2rem, 5vw, 4rem);
+        align-items: center;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 900px) {
+        .about-grid {
+          grid-template-columns: 0.95fr 1.05fr;
+        }
+      }
+      .about-portrait {
+        position: relative;
+        aspect-ratio: 4 / 5;
+        border-radius: var(--radius-lg);
+        background:
+          radial-gradient(60% 50% at 50% 35%, rgba(201, 150, 122, 0.55), transparent 70%),
+          linear-gradient(160deg, var(--plum) 0%, var(--plum-deep) 100%);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+      }
+      .about-portrait::after {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border: 1px solid rgba(201, 150, 122, 0.55);
+        border-radius: calc(var(--radius-lg) - 8px);
+      }
+      .about-portrait .monogram {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .about-portrait .monogram svg {
+        width: 56%;
+        height: auto;
+        color: var(--rose-gold);
+      }
+      .about-portrait .badge {
+        position: absolute;
+        bottom: 28px;
+        left: 28px;
+        right: 28px;
+        padding: 1rem 1.25rem;
+        background: rgba(253, 246, 240, 0.95);
+        border-radius: var(--radius);
+        backdrop-filter: blur(8px);
+      }
+      .about-portrait .badge strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.3rem;
+        color: var(--plum);
+      }
+      .about-portrait .badge span {
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--rose-gold-deep);
+      }
+      .about-text h2 em {
+        font-style: italic;
+        color: var(--rose-gold-deep);
+      }
+      .about-text p {
+        font-size: 1.05rem;
+      }
+      .values {
+        list-style: none;
+        margin: 2rem 0 0;
+        padding: 0;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 560px) {
+        .values {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .values li {
+        padding: 1.1rem 1.25rem;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+      }
+      .values li:hover {
+        border-color: var(--rose-gold);
+        transform: translateY(-2px);
+      }
+      .values strong {
+        display: block;
+        font-family: var(--font-display);
+        font-size: 1.2rem;
+        color: var(--plum);
+        margin-bottom: 0.25rem;
+      }
+      .values span {
+        font-size: 0.92rem;
+        color: var(--ink-soft);
+      }
+
+      /* ---------- Booking ---------- */
+      .booking {
+        background:
+          radial-gradient(60% 50% at 100% 0%, rgba(201, 150, 122, 0.18), transparent 60%),
+          var(--cream-warm);
+      }
+      .booking-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: clamp(1.75rem, 4vw, 3rem);
+        box-shadow: var(--shadow-md);
+        max-width: 880px;
+        margin: 0 auto;
+      }
+      .booking-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.1rem 1.25rem;
+      }
+      @media (min-width: 640px) {
+        .booking-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .booking-grid .full {
+          grid-column: 1 / -1;
+        }
+      }
+      .field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+      .field label {
+        font-size: 0.78rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--rose-gold-deep);
+        font-weight: 600;
+      }
+      .field input,
+      .field select,
+      .field textarea {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        padding: 0.85rem 1rem;
+        border-radius: 12px;
+        border: 1px solid var(--line-strong);
+        background: var(--cream);
+        color: var(--ink);
+        transition: border-color 0.25s var(--ease), background 0.25s var(--ease),
+          box-shadow 0.25s var(--ease);
+      }
+      .field textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        outline: none;
+        border-color: var(--rose-gold);
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(201, 150, 122, 0.18);
+      }
+      .booking-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.75rem;
+      }
+      .booking-note {
+        font-size: 0.85rem;
+        color: var(--ink-soft);
+      }
+      .booking-success {
+        display: none;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.1rem 1.25rem;
+        margin-top: 1.5rem;
+        background: rgba(67, 122, 34, 0.08);
+        border: 1px solid rgba(67, 122, 34, 0.3);
+        border-radius: var(--radius);
+        color: #2f5717;
+      }
+      .booking-success.show {
+        display: flex;
+      }
+      .booking-success svg {
+        flex: none;
+        margin-top: 2px;
+      }
+
+      /* ---------- Contact ---------- */
+      .contact {
+        background: var(--cream);
+      }
+      .contact-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 760px) {
+        .contact-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .contact-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 2rem 1.75rem;
+        text-align: left;
+        transition: border-color 0.3s var(--ease), transform 0.3s var(--ease),
+          box-shadow 0.3s var(--ease);
+      }
+      .contact-card:hover {
+        border-color: var(--rose-gold);
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
+      .contact-card .ico {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--plum);
+        color: var(--rose-gold);
+        display: grid;
+        place-items: center;
+        margin-bottom: 1rem;
+      }
+      .contact-card .ico svg {
+        width: 22px;
+        height: 22px;
+      }
+      .contact-card h3 {
+        font-size: 1.35rem;
+        margin-bottom: 0.5rem;
+      }
+      .contact-card p,
+      .contact-card a {
+        font-size: 0.98rem;
+        color: var(--ink-soft);
+        line-height: 1.6;
+      }
+      .contact-card a {
+        font-weight: 600;
+        color: var(--plum);
+        word-break: break-word;
+      }
+      .contact-card small {
+        display: block;
+        margin-top: 0.4rem;
+        color: var(--rose-gold-deep);
+        font-style: italic;
+      }
+      .hours-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .hours-list li {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.4rem 0;
+        font-size: 0.95rem;
+        color: var(--ink-soft);
+        border-bottom: 1px dashed var(--line);
+      }
+      .hours-list li:last-child {
+        border-bottom: 0;
+      }
+      .hours-list strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      /* ---------- Footer ---------- */
+      .footer {
+        background: var(--plum-deep);
+        color: rgba(253, 246, 240, 0.78);
+        padding-block: 4rem 2rem;
+      }
+      .footer a {
+        color: var(--cream);
+      }
+      .footer a:hover {
+        color: var(--rose-gold);
+      }
+      .footer-grid {
+        display: grid;
+        gap: 2.5rem;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 760px) {
+        .footer-grid {
+          grid-template-columns: 1.4fr 1fr 1fr;
+        }
+      }
+      .footer-brand {
+        max-width: 360px;
+      }
+      .footer-brand .brand-name {
+        color: var(--cream);
+      }
+      .footer-brand p {
+        color: rgba(253, 246, 240, 0.7);
+        font-size: 0.95rem;
+        margin-top: 1rem;
+      }
+      .footer h4 {
+        color: var(--rose-gold);
+        font-family: var(--font-body);
+        font-size: 0.78rem;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        margin: 0 0 1rem;
+        font-weight: 700;
+      }
+      .footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.55rem;
+        font-size: 0.95rem;
+      }
+      .footer-bottom {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(253, 246, 240, 0.14);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.85rem;
+      }
+      .partner-line {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: rgba(253, 246, 240, 0.7);
+      }
+      .partner-line strong {
+        color: var(--cream);
+        font-weight: 600;
+      }
+
+      /* ---------- WhatsApp FAB ---------- */
+      .fab {
+        position: fixed;
+        right: clamp(1rem, 3vw, 1.75rem);
+        bottom: clamp(1rem, 3vw, 1.75rem);
+        z-index: 80;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #25d366;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35),
+          0 4px 12px rgba(0, 0, 0, 0.18);
+        transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+      }
+      .fab:hover {
+        transform: translateY(-3px) scale(1.05);
+        color: #fff;
+        box-shadow: 0 18px 38px rgba(37, 211, 102, 0.4),
+          0 6px 14px rgba(0, 0, 0, 0.22);
+      }
+      .fab svg {
+        width: 30px;
+        height: 30px;
+      }
+      .fab::after {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 2px solid rgba(37, 211, 102, 0.45);
+        animation: pulse 2.4s ease-out infinite;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1.45);
+          opacity: 0;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .fab::after {
+          animation: none;
+        }
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Reveal-on-scroll */
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="sr-only" href="#main">Skip to main content</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="top">
+      <div class="container nav">
+        <a class="brand" href="#top" aria-label="Kuna's Beauty Salon, home">
+          <!-- Inline SVG logo: K monogram with rose-gold accent dot -->
+          <svg
+            class="brand-mark"
+            viewBox="0 0 48 48"
+            role="img"
+            aria-label="Kuna monogram"
+          >
+            <circle cx="24" cy="24" r="23" fill="#4a1942" />
+            <path
+              d="M16 12 V36 M16 24 L28 12 M16 24 L28 36"
+              stroke="#c9967a"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              fill="none"
+            />
+            <circle cx="33.5" cy="13.5" r="2.4" fill="#c9967a" />
+          </svg>
+          <span>
+            <span class="brand-name">Kuna's</span>
+            <span class="brand-sub">Beauty · Wellness</span>
+          </span>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a class="btn btn--solid-rose nav-cta" href="#book">Book Now</a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="container">
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="#services">Services</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="btn btn--solid-rose" href="#book">Book Now</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero-grid">
+          <div>
+            <p class="hero-eyebrow">KUSH Beauty Shop · Kushy's Beauty Haven</p>
+            <h1 id="hero-heading">
+              Kuna's Beauty Salon — <em>Where Beauty Meets Luxury</em>
+            </h1>
+            <p class="hero-lead">
+              A warm, intentional sanctuary in Kenya for haircare, skincare, nails,
+              and spa rituals. Founded by Inviolata Kuna Taaban, we treat every visit
+              as a small ceremony — unhurried, refined, and personal.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn--solid-rose" href="#book">
+                Book Now
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a class="btn btn--ghost" href="#services">Explore Services</a>
+            </div>
+
+            <dl class="hero-meta">
+              <div>
+                <dt>Located in</dt>
+                <dd>Nairobi, Kenya</dd>
+              </div>
+              <div>
+                <dt>Open</dt>
+                <dd>Mon–Sat · 9–7</dd>
+              </div>
+              <div>
+                <dt>Founder</dt>
+                <dd>Inviolata K. Taaban</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-ornament" aria-hidden="true">
+            <!-- Decorative SVG: stylized botanical / vanity emblem -->
+            <svg viewBox="0 0 200 240" fill="none">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#c9967a" />
+                  <stop offset="100%" stop-color="#fdf6f0" />
+                </linearGradient>
+              </defs>
+              <circle
+                cx="100"
+                cy="120"
+                r="78"
+                stroke="url(#g1)"
+                stroke-width="1"
+                opacity="0.7"
+              />
+              <circle
+                cx="100"
+                cy="120"
+                r="58"
+                stroke="#c9967a"
+                stroke-width="1"
+                opacity="0.6"
+              />
+              <path
+                d="M100 50 C 70 80, 70 160, 100 190 C 130 160, 130 80, 100 50 Z"
+                stroke="#c9967a"
+                stroke-width="1.3"
+                fill="rgba(201,150,122,0.08)"
+              />
+              <path
+                d="M60 120 C 80 110, 120 110, 140 120"
+                stroke="#fdf6f0"
+                stroke-width="1"
+                opacity="0.7"
+              />
+              <path
+                d="M60 120 C 80 130, 120 130, 140 120"
+                stroke="#fdf6f0"
+                stroke-width="1"
+                opacity="0.7"
+              />
+              <circle cx="100" cy="120" r="4" fill="#c9967a" />
+              <text
+                x="100"
+                y="222"
+                text-anchor="middle"
+                font-family="Cormorant Garamond, serif"
+                font-style="italic"
+                font-size="14"
+                fill="#fdf6f0"
+                opacity="0.85"
+              >
+                est. by Inviolata K.
+              </text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ STRIP ============ -->
+      <div class="strip" aria-hidden="true">
+        <div class="strip-inner">
+          <span>Haircare</span>
+          <span>Skincare Rituals</span>
+          <span>Nail Artistry</span>
+          <span>Spa &amp; Wellness</span>
+          <span>Bridal Packages</span>
+          <span>Haircare</span>
+          <span>Skincare Rituals</span>
+          <span>Nail Artistry</span>
+          <span>Spa &amp; Wellness</span>
+          <span>Bridal Packages</span>
+        </div>
+      </div>
+
+      <!-- ============ SERVICES ============ -->
+      <section class="services" id="services" aria-labelledby="services-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Services &amp; Pricing</p>
+            <h2 id="services-heading">A curated menu, crafted with care</h2>
+            <div class="divider" aria-hidden="true"></div>
+            <p>
+              Every treatment is hand-selected, performed with premium products, and
+              tailored to your hair, skin, and mood. Prices are listed in Kenyan
+              Shillings (KES) and start from the figures shown.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <!-- HAIR -->
+            <article class="service-card reveal">
+              <div class="service-card-head">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 4c4 4 4 10 0 16" />
+                    <path d="M10 4c4 4 4 10 0 16" />
+                    <path d="M14 4c4 4 4 10 0 16" />
+                    <path d="M18 4c2 2 2 6 0 8" />
+                  </svg>
+                </div>
+                <h3>Haircare</h3>
+              </div>
+              <p class="lead">
+                From natural-hair sculpting to silk presses, locs, and protective
+                styles — designed to protect texture and leave the scalp nourished.
+              </p>
+              <ul class="price-list">
+                <li>
+                  <span class="name">
+                    Wash, Treatment &amp; Style
+                    <span class="desc">Deep cleanse + hydrating mask + blow-out</span>
+                  </span>
+                  <span class="price">KES 2,500</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Silk Press &amp; Trim
+                    <span class="desc">Heat-safe straightening with precision dust</span>
+                  </span>
+                  <span class="price">KES 3,800</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Protective Braiding
+                    <span class="desc">Knotless, box, or feed-in styles</span>
+                  </span>
+                  <span class="price">KES 4,500</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Loc Maintenance &amp; Retwist
+                    <span class="desc">Crown care for established locs</span>
+                  </span>
+                  <span class="price">KES 3,200</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Color &amp; Toning
+                    <span class="desc">Balayage, highlights, gloss treatments</span>
+                  </span>
+                  <span class="price">KES 6,500</span>
+                </li>
+              </ul>
+              <p class="service-foot">Consultation included with every appointment.</p>
+            </article>
+
+            <!-- SKIN -->
+            <article class="service-card reveal">
+              <div class="service-card-head">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3c3 4 5 7 5 10a5 5 0 1 1-10 0c0-3 2-6 5-10Z" />
+                    <path d="M9 13a3 3 0 0 0 3 3" />
+                  </svg>
+                </div>
+                <h3>Skincare</h3>
+              </div>
+              <p class="lead">
+                Facials and rituals tuned to melanin-rich skin — calming, brightening,
+                and resurfacing without harsh actives.
+              </p>
+              <ul class="price-list">
+                <li>
+                  <span class="name">
+                    Signature Glow Facial
+                    <span class="desc">Cleanse, exfoliate, mask, massage</span>
+                  </span>
+                  <span class="price">KES 3,000</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Hyperpigmentation Repair
+                    <span class="desc">Vitamin C + gentle peel protocol</span>
+                  </span>
+                  <span class="price">KES 4,800</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Hydra-Calm Treatment
+                    <span class="desc">For sensitive or post-procedure skin</span>
+                  </span>
+                  <span class="price">KES 4,200</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Back &amp; Décolleté Care
+                    <span class="desc">Cleanse, extract, soothe</span>
+                  </span>
+                  <span class="price">KES 3,800</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Bridal Skin Series
+                    <span class="desc">Six-session glow program</span>
+                  </span>
+                  <span class="price">KES 22,000</span>
+                </li>
+              </ul>
+              <p class="service-foot">All facials begin with a skin-history conversation.</p>
+            </article>
+
+            <!-- NAILS -->
+            <article class="service-card reveal">
+              <div class="service-card-head">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21V8a3 3 0 1 1 6 0v13" />
+                    <path d="M9 14h6" />
+                    <path d="M9 21h6" />
+                  </svg>
+                </div>
+                <h3>Nail Services</h3>
+              </div>
+              <p class="lead">
+                Precise shaping, long-wear gel, and detailed nail art — finished with
+                cuticle and hand-care that lasts beyond the appointment.
+              </p>
+              <ul class="price-list">
+                <li>
+                  <span class="name">
+                    Classic Manicure
+                    <span class="desc">Shape, cuticle care, polish</span>
+                  </span>
+                  <span class="price">KES 1,200</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Gel Manicure
+                    <span class="desc">Up to 3 weeks of shine</span>
+                  </span>
+                  <span class="price">KES 1,800</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Builder-Gel Overlay
+                    <span class="desc">Strength + length on natural nails</span>
+                  </span>
+                  <span class="price">KES 2,500</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Spa Pedicure
+                    <span class="desc">Soak, scrub, mask, massage</span>
+                  </span>
+                  <span class="price">KES 2,200</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Nail Art (per accent)
+                    <span class="desc">Hand-painted, chrome, or 3D</span>
+                  </span>
+                  <span class="price">KES 250+</span>
+                </li>
+              </ul>
+              <p class="service-foot">Sterilised tools and single-use files for every guest.</p>
+            </article>
+
+            <!-- SPA -->
+            <article class="service-card reveal">
+              <div class="service-card-head">
+                <div class="service-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 18c4-2 12-2 16 0" />
+                    <path d="M12 4v8" />
+                    <path d="M9 7c0 2 1 4 3 5 2-1 3-3 3-5" />
+                    <path d="M6 13c-1 1-2 3-2 5" />
+                    <path d="M18 13c1 1 2 3 2 5" />
+                  </svg>
+                </div>
+                <h3>Spa Treatments</h3>
+              </div>
+              <p class="lead">
+                Slow rituals to restore the body — bespoke massages, body wraps, and
+                wellness ceremonies that honor stillness.
+              </p>
+              <ul class="price-list">
+                <li>
+                  <span class="name">
+                    Swedish Relaxation Massage
+                    <span class="desc">60 minutes of full-body release</span>
+                  </span>
+                  <span class="price">KES 3,500</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Deep Tissue &amp; Sports
+                    <span class="desc">Targeted recovery, 75 min</span>
+                  </span>
+                  <span class="price">KES 4,500</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Aromatherapy Ritual
+                    <span class="desc">Custom-blended botanical oils</span>
+                  </span>
+                  <span class="price">KES 4,200</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Body Polish &amp; Wrap
+                    <span class="desc">Exfoliate, hydrate, glow</span>
+                  </span>
+                  <span class="price">KES 5,000</span>
+                </li>
+                <li>
+                  <span class="name">
+                    Couples Sanctuary
+                    <span class="desc">Side-by-side, 90 min</span>
+                  </span>
+                  <span class="price">KES 9,800</span>
+                </li>
+              </ul>
+              <p class="service-foot">All treatments include herbal tea on arrival.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ GALLERY ============ -->
+      <section class="gallery" id="gallery" aria-labelledby="gallery-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Gallery</p>
+            <h2 id="gallery-heading">A glimpse inside the haven</h2>
+            <div class="divider" aria-hidden="true"></div>
+            <p>
+              Moments from the studio — texture, color, and craft. Photography is
+              currently being curated; please enjoy these styled placeholders.
+            </p>
+          </div>
+
+          <div class="gallery-grid" role="list">
+            <figure class="tile tile-1 wide reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <circle cx="50" cy="50" r="32" />
+                  <path d="M30 50c8 6 32 6 40 0" />
+                  <path d="M30 50c8-6 32-6 40 0" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>The Salon Floor</strong><span>Interior</span>
+              </figcaption>
+            </figure>
+
+            <figure class="tile tile-2 reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M30 70 Q50 30 70 70" />
+                  <circle cx="50" cy="40" r="6" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>Bridal Glow</strong><span>Skincare</span>
+              </figcaption>
+            </figure>
+
+            <figure class="tile tile-3 tall reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M50 18 C 30 35, 30 65, 50 82 C 70 65, 70 35, 50 18Z" />
+                  <path d="M50 30v40" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>Loc Crown</strong><span>Haircare</span>
+              </figcaption>
+            </figure>
+
+            <figure class="tile tile-4 reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <rect x="34" y="30" width="32" height="44" rx="14" />
+                  <path d="M40 50h20" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>Nail Atelier</strong><span>Nails</span>
+              </figcaption>
+            </figure>
+
+            <figure class="tile tile-5 reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <circle cx="35" cy="50" r="14" />
+                  <circle cx="65" cy="50" r="14" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>Couples Suite</strong><span>Spa</span>
+              </figcaption>
+            </figure>
+
+            <figure class="tile tile-6 reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M20 70c10-30 50-30 60 0" />
+                  <path d="M50 30v40" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>Color Bar</strong><span>Haircare</span>
+              </figcaption>
+            </figure>
+
+            <figure class="tile tile-7 wide reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M10 60 Q 40 20 60 40 T 110 30" />
+                  <circle cx="10" cy="60" r="3" />
+                  <circle cx="110" cy="30" r="3" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>The Wellness Lounge</strong><span>Interior</span>
+              </figcaption>
+            </figure>
+
+            <figure class="tile tile-8 reveal" role="listitem">
+              <div class="tile-art">
+                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+                  <path d="M50 22c10 12 18 22 18 32a18 18 0 1 1-36 0c0-10 8-20 18-32Z" />
+                </svg>
+              </div>
+              <figcaption class="tile-caption">
+                <strong>Botanicals</strong><span>Wellness</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <p class="gallery-note">
+            Real photography from the salon will replace these styled cards as the
+            collection is finalised.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="about" id="about" aria-labelledby="about-heading">
+        <div class="container about-grid">
+          <div class="about-portrait reveal" aria-hidden="true">
+            <div class="monogram">
+              <svg viewBox="0 0 200 200" fill="none">
+                <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="1" opacity="0.6" />
+                <path
+                  d="M70 50 V150 M70 100 L120 50 M70 100 L120 150"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M130 60 Q140 70 130 80"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                  fill="none"
+                />
+                <text
+                  x="100"
+                  y="180"
+                  text-anchor="middle"
+                  font-family="Cormorant Garamond, serif"
+                  font-style="italic"
+                  font-size="16"
+                  fill="currentColor"
+                  opacity="0.85"
+                >
+                  Inviolata K. Taaban
+                </text>
+              </svg>
+            </div>
+            <div class="badge">
+              <strong>Founder &amp; Lead Stylist</strong>
+              <span>Kuna's Beauty Salon</span>
+            </div>
+          </div>
+
+          <div class="about-text reveal">
+            <p class="eyebrow">Our Story</p>
+            <h2 id="about-heading">
+              Beauty as <em>ceremony</em>, not chore
+            </h2>
+            <p>
+              Kuna's Beauty Salon — also known to longtime clients as
+              <strong>KUSH Beauty Shop</strong> and <strong>Kushy's Beauty Haven</strong>
+              — was founded by Inviolata Kuna Taaban out of a simple belief: every
+              woman deserves an unhurried hour where she is the priority. What began
+              as private appointments in a small Nairobi studio grew, by word of
+              mouth, into a full beauty and wellness destination.
+            </p>
+            <p>
+              Inviolata trained across haircare, advanced skincare, and spa therapy,
+              and built her practice around techniques that respect African hair
+              textures and melanin-rich skin. Today, the salon brings that same
+              attention to a wider community — pairing world-class technique with
+              the warmth of a friend's living room.
+            </p>
+
+            <ul class="values">
+              <li>
+                <strong>Craft</strong>
+                <span>Precision technique, premium products, continual study.</span>
+              </li>
+              <li>
+                <strong>Care</strong>
+                <span>Listening first. Pressure-free consultations, every visit.</span>
+              </li>
+              <li>
+                <strong>Calm</strong>
+                <span>A quiet, sanctuary-like space — phones encouraged off.</span>
+              </li>
+              <li>
+                <strong>Community</strong>
+                <span>Lifting Kenyan beauty professionals through mentorship.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BOOKING ============ -->
+      <section class="booking" id="book" aria-labelledby="book-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Booking</p>
+            <h2 id="book-heading">Reserve your moment</h2>
+            <div class="divider" aria-hidden="true"></div>
+            <p>
+              Tell us a little about what you'd like, and Inviolata's team will
+              confirm your appointment within 24 hours.
+            </p>
+          </div>
+
+          <form class="booking-card reveal" id="bookingForm" novalidate>
+            <div class="booking-grid">
+              <div class="field">
+                <label for="f-name">Your Name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Wanjiru Kimani" />
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone Number</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+254 7XX XXX XXX" />
+              </div>
+              <div class="field">
+                <label for="f-service">Service</label>
+                <select id="f-service" name="service" required>
+                  <option value="" disabled selected>Choose a service</option>
+                  <optgroup label="Haircare">
+                    <option>Wash, Treatment &amp; Style</option>
+                    <option>Silk Press &amp; Trim</option>
+                    <option>Protective Braiding</option>
+                    <option>Loc Maintenance &amp; Retwist</option>
+                    <option>Color &amp; Toning</option>
+                  </optgroup>
+                  <optgroup label="Skincare">
+                    <option>Signature Glow Facial</option>
+                    <option>Hyperpigmentation Repair</option>
+                    <option>Hydra-Calm Treatment</option>
+                    <option>Bridal Skin Series</option>
+                  </optgroup>
+                  <optgroup label="Nail Services">
+                    <option>Classic Manicure</option>
+                    <option>Gel Manicure</option>
+                    <option>Builder-Gel Overlay</option>
+                    <option>Spa Pedicure</option>
+                  </optgroup>
+                  <optgroup label="Spa Treatments">
+                    <option>Swedish Relaxation Massage</option>
+                    <option>Deep Tissue &amp; Sports</option>
+                    <option>Aromatherapy Ritual</option>
+                    <option>Body Polish &amp; Wrap</option>
+                    <option>Couples Sanctuary</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-date">Preferred Date</label>
+                <input id="f-date" name="date" type="date" required />
+              </div>
+              <div class="field full">
+                <label for="f-notes">Notes for your stylist</label>
+                <textarea
+                  id="f-notes"
+                  name="notes"
+                  placeholder="Inspiration, hair history, allergies, special occasions — anything that helps us prepare."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="booking-actions">
+              <button class="btn" type="submit">
+                Request Appointment
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 5l7 7-7 7" />
+                </svg>
+              </button>
+              <span class="booking-note">
+                We'll confirm via call or WhatsApp. No deposit required.
+              </span>
+            </div>
+
+            <div class="booking-success" id="bookingSuccess" role="status" aria-live="polite">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <div>
+                <strong>Request received.</strong> Asante sana — we'll be in touch
+                shortly to confirm your appointment.
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="section-head reveal">
+            <p class="eyebrow">Visit &amp; Connect</p>
+            <h2 id="contact-heading">Find us in Nairobi</h2>
+            <div class="divider" aria-hidden="true"></div>
+          </div>
+
+          <div class="contact-grid">
+            <article class="contact-card reveal">
+              <div class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-7.5 8-13a8 8 0 1 0-16 0c0 5.5 8 13 8 13Z" />
+                  <circle cx="12" cy="9" r="3" />
+                </svg>
+              </div>
+              <h3>Studio Address</h3>
+              <p>
+                Kuna Plaza, 2nd Floor<br />
+                Ngong Road, Kilimani<br />
+                Nairobi, Kenya
+              </p>
+              <small>By appointment, walk-ins welcome</small>
+            </article>
+
+            <article class="contact-card reveal">
+              <div class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92V21a1 1 0 0 1-1.09 1A19 19 0 0 1 2 4.09 1 1 0 0 1 3 3h4.09a1 1 0 0 1 1 .75c.16.86.43 1.7.8 2.5a1 1 0 0 1-.22 1.11L7 9a16 16 0 0 0 8 8l1.64-1.64a1 1 0 0 1 1.11-.22c.8.37 1.64.64 2.5.8a1 1 0 0 1 .75 1Z" />
+                </svg>
+              </div>
+              <h3>Call &amp; WhatsApp</h3>
+              <p>
+                <a href="tel:+254700000000">+254 700 000 000</a><br />
+                <a
+                  href="https://wa.me/254700000000?text=Hello%20Kuna%27s%20Beauty%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment."
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp the salon →</a
+                >
+              </p>
+              <small>Phone &amp; WhatsApp number to be confirmed</small>
+            </article>
+
+            <article class="contact-card reveal">
+              <div class="ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </div>
+              <h3>Studio Hours</h3>
+              <ul class="hours-list">
+                <li><strong>Mon – Fri</strong><span>9:00 – 19:00</span></li>
+                <li><strong>Saturday</strong><span>9:00 – 18:00</span></li>
+                <li><strong>Sunday</strong><span>By appointment</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Kuna's Beauty Salon, home">
+            <svg
+              class="brand-mark"
+              viewBox="0 0 48 48"
+              role="img"
+              aria-label="Kuna monogram"
+            >
+              <circle cx="24" cy="24" r="23" fill="#c9967a" />
+              <path
+                d="M16 12 V36 M16 24 L28 12 M16 24 L28 36"
+                stroke="#4a1942"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                fill="none"
+              />
+              <circle cx="33.5" cy="13.5" r="2.4" fill="#4a1942" />
+            </svg>
+            <span>
+              <span class="brand-name">Kuna's Beauty Salon</span>
+              <span class="brand-sub">KUSH Beauty Shop · Kushy's Beauty Haven</span>
+            </span>
+          </a>
+          <p>
+            A premium beauty and wellness sanctuary in Kenya, founded by
+            Inviolata Kuna Taaban — where craft, calm, and care meet.
+          </p>
+        </div>
+
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#services">Services &amp; Pricing</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#book">Book an Appointment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Kuna Plaza, Ngong Road, Nairobi</li>
+            <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+            <li>
+              <a
+                href="https://wa.me/254700000000"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> Kuna's Beauty Salon. All rights reserved.</span>
+        <span class="partner-line">
+          Crafted in partnership with <strong>ELB Consulting Tech</strong>
+        </span>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      class="fab"
+      href="https://wa.me/254700000000?text=Hello%20Kuna%27s%20Beauty%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment."
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat with Kuna's Beauty Salon on WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path
+          d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.1 1.5h.2c6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4A9.6 9.6 0 0 1 6.4 15c0-5.3 4.3-9.6 9.6-9.6S25.6 9.7 25.6 15s-4.3 9.7-9.6 9.7zm5.4-7.1c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4a8.7 8.7 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.4-.5.2-.4c.1-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.2 5.2 4.5 2.5 1 3 .8 3.5.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"
+        />
+      </svg>
+    </a>
+
+    <script>
+      // ----- Year -----
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // ----- Mobile menu -----
+      const navToggle = document.getElementById("navToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      navToggle.addEventListener("click", () => {
+        const open = mobileMenu.classList.toggle("open");
+        navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      mobileMenu.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        })
+      );
+
+      // ----- Sticky header shadow -----
+      const header = document.querySelector(".site-header");
+      const onScroll = () => {
+        header.classList.toggle("scrolled", window.scrollY > 12);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      // ----- Booking date min today -----
+      const dateInput = document.getElementById("f-date");
+      if (dateInput) {
+        const today = new Date();
+        const iso = today.toISOString().split("T")[0];
+        dateInput.min = iso;
+      }
+
+      // ----- Booking form submit -----
+      const form = document.getElementById("bookingForm");
+      const success = document.getElementById("bookingSuccess");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        success.classList.add("show");
+        form.querySelectorAll("input, select, textarea").forEach((el) => {
+          if (el.type !== "submit") el.value = "";
+        });
+        success.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+
+      // ----- Reveal on scroll -----
+      const reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("in");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        reveals.forEach((el) => io.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add("in"));
+      }
+    </script>
+  </body>
+</html>
