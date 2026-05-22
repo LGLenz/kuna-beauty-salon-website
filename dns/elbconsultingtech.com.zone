@@ -1,0 +1,22 @@
+;; DNS records relevant to the Kuna site, excerpted from the parent
+;; elbconsultingtech.com zone (NOT authoritative — the parent zone is
+;; managed outside this repository).
+;;
+;; Authoritative management: ELB Consulting Tech parent infrastructure.
+;; Replicate the change below into the parent provider's control panel to
+;; bring the custom domain online.
+;;
+;; Expected change to bring https://kuna.elbconsultingtech.com on-line via
+;; GitHub Pages (LGLenz/kuna-beauty-salon-website):
+
+$ORIGIN	elbconsultingtech.com.
+$TTL	3600
+
+; --- Kuna subdomain ---
+; Replaces any prior A/AAAA record for `kuna` with a single CNAME to the
+; GitHub Pages user site. GitHub Pages will then issue a managed TLS
+; certificate for kuna.elbconsultingtech.com via Let's Encrypt.
+kuna	IN	CNAME	lglenz.github.io.
+
+;; NOTE: the apex (`elbconsultingtech.com`) and other subdomains are not
+;; managed here. Only the `kuna` record is in scope for this repository.
