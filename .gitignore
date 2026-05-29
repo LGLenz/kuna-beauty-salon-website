@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Local env / secrets (none expected, but be safe)
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]

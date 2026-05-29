@@ -1,0 +1,127 @@
+name: Site Health (Post-deploy + Scheduled)
+
+# Verifies that the live site is reachable and correctly configured.
+#
+# Runs:
+#   - On-demand (workflow_dispatch)
+#   - On schedule (every 6h)
+#   - After Deploy GitHub Pages workflow completes (smoke test)
+#
+# Targets:
+#   - https://lglenz.github.io/kuna-beauty-salon-website/  (Pages default URL — warn-only*)
+#   - https://kuna.elbconsultingtech.com                   (custom domain — warn-only)
+#
+# This workflow uses NO secrets and is read-only.
+#
+# IMPORTANT: BOTH targets are currently warn-only because:
+#   - The custom domain `kuna.elbconsultingtech.com` still resolves to the
+#     parent ELB origin (75.126.104.x) rather than `lglenz.github.io`,
+#     which means TLS will fail there until a CNAME is added in the
+#     elbconsultingtech.com zone.
+#   - GitHub Pages, when a custom domain is configured on the repo,
+#     301-redirects the default `lglenz.github.io/<repo>/` URL to the
+#     custom domain. With the custom domain TLS broken, curl-following
+#     that redirect also fails. Once the CNAME is added and TLS is
+#     issued, flip the `pages-default` target back to required (or just
+#     drop it in favour of `custom-domain`).
+# See dns/records.yaml and docs/Operating-Model.md for the expected fix.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every 6 hours, off the hour to avoid the API rush.
+    - cron: "17 */6 * * *"
+  workflow_run:
+    workflows: ["Deploy GitHub Pages (Production)"]
+    types: [completed]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: site-health
+  cancel-in-progress: false
+
+jobs:
+  dns-check:
+    name: DNS source-of-truth diff
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dig + python yaml
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends dnsutils python3-yaml
+
+      - name: Compare expected vs live DNS (warn-only)
+        id: dns
+        run: |
+          set -uo pipefail
+          python3 scripts/check_dns.py dns/records.yaml | tee dns-report.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+        continue-on-error: true
+
+      - name: Summarise DNS check
+        run: |
+          {
+            echo "## DNS source-of-truth check"
+            echo ""
+            echo '```'
+            cat dns-report.txt || echo "(no report produced)"
+            echo '```'
+            echo ""
+            echo "DNS drift is **warn-only** until the kuna CNAME is added in the elbconsultingtech.com zone."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Warn (not fail) if DNS check reported drift
+        if: steps.dns.outputs.exit_code != '0'
+        run: |
+          echo "::warning::DNS drift detected (warn-only). See job summary and dns/records.yaml."
+
+  http-check:
+    name: HTTP / TLS / title smoke test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - url: "https://lglenz.github.io/kuna-beauty-salon-website/"
+            label: "pages-default"
+            required: "false"
+          - url: "https://kuna.elbconsultingtech.com"
+            label: "custom-domain"
+            required: "false"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Probe ${{ matrix.target.label }} (${{ matrix.target.url }})
+        id: probe
+        env:
+          TARGET_URL: ${{ matrix.target.url }}
+          TARGET_LABEL: ${{ matrix.target.label }}
+          REQUIRED: ${{ matrix.target.required }}
+        run: |
+          set -uo pipefail
+          bash scripts/site_health.sh "$TARGET_URL" "$TARGET_LABEL" "$REQUIRED"
+
+  open-issue-on-failure:
+    name: Open tracking issue on failure
+    needs: [dns-check, http-check]
+    if: failure() && github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          gh issue create \
+            --repo "${{ github.repository }}" \
+            --title "Site health: scheduled run failed ($(date -u +%Y-%m-%dT%H:%MZ))" \
+            --label "site-health" \
+            --body "Scheduled site-health run failed. See the workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+            || echo "Issue creation failed (label may not exist or permissions insufficient) — not blocking."

@@ -1,0 +1,50 @@
+# DNS source of truth for kuna.elbconsultingtech.com
+#
+# This file is the canonical expectation for what DNS should look like for
+# the `kuna` subdomain of `elbconsultingtech.com`. It is consumed by
+# scripts/check_dns.py from the site-health workflow to compare expected
+# vs live records.
+#
+# Authoritative zone for elbconsultingtech.com is managed by the parent
+# ELB Consulting Tech infrastructure (NOT this repository). The subset of
+# records we expect for the Kuna site is captured below. The full BIND-style
+# excerpt is tracked in dns/elbconsultingtech.com.zone for reference.
+#
+# CURRENT STATE (2026-05-22): the kuna subdomain still resolves via the
+# parent A record (75.126.104.x — the legacy ELB origin) instead of via a
+# CNAME to GitHub Pages. Consequently:
+#   - HTTPS to https://kuna.elbconsultingtech.com fails the TLS handshake.
+#   - GitHub cannot issue a Let's Encrypt certificate for the host.
+# The site-health workflow therefore treats the custom domain as warn-only.
+#
+# Once the CNAME below is added in the elbconsultingtech.com zone and the
+# Pages TLS cert has been issued, flip `required: "true"` for the
+# `custom-domain` target in .github/workflows/site-health.yml.
+
+domain: elbconsultingtech.com
+
+# We do not own the parent zone here. These are documented for traceability
+# only — check_dns.py does not fail on NS drift in this repo.
+nameservers: []
+
+records:
+  # The single record we need: kuna -> lglenz.github.io (GitHub Pages).
+  # Source: https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain
+  - name: kuna
+    type: CNAME
+    expected:
+      - lglenz.github.io.
+    notes: >
+      Subdomain CNAME that points the Kuna site at the GitHub Pages user
+      site. Until this record is in place, Pages cannot provision a TLS
+      certificate for kuna.elbconsultingtech.com and the custom-domain
+      health check stays warn-only.
+
+# How site-health uses this file:
+#   - For each record, look up the live value via `dig +short`.
+#   - For `expected`: live set must equal expected set (order-independent).
+#   - For `expected_contains`: at least one live TXT value must contain each
+#     listed substring.
+#   - In this repo, drift is reported as a WARNING only (see site-health.yml)
+#     because the parent zone is owned outside this repository and the fix
+#     requires a manual change there.
