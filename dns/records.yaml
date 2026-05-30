@@ -1,4 +1,4 @@
-# DNS source of truth for kuna.elbconsultingtech.com
+# DNS source of truth for kuna.bridgeaxis-consulting.de
 #
 # This file is the canonical expectation for what DNS should look like for
 # the `kuna` subdomain of `elbconsultingtech.com`. It is consumed by
@@ -13,7 +13,7 @@
 # CURRENT STATE (2026-05-22): the kuna subdomain still resolves via the
 # parent A record (75.126.104.x — the legacy ELB origin) instead of via a
 # CNAME to GitHub Pages. Consequently:
-#   - HTTPS to https://kuna.elbconsultingtech.com fails the TLS handshake.
+#   - HTTPS to https://kuna.bridgeaxis-consulting.de fails the TLS handshake.
 #   - GitHub cannot issue a Let's Encrypt certificate for the host.
 # The site-health workflow therefore treats the custom domain as warn-only.
 #
@@ -37,7 +37,7 @@ records:
     notes: >
       Subdomain CNAME that points the Kuna site at the GitHub Pages user
       site. Until this record is in place, Pages cannot provision a TLS
-      certificate for kuna.elbconsultingtech.com and the custom-domain
+      certificate for kuna.bridgeaxis-consulting.de and the custom-domain
       health check stays warn-only.
 
 # How site-health uses this file:

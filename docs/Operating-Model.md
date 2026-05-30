@@ -2,7 +2,7 @@
 
 This document is the single source of truth for how changes flow from an
 assistant-drafted edit to a verified production deployment of
-**Kuna's Beauty Salon** (`https://kuna.elbconsultingtech.com` — also
+**Kuna's Beauty Salon** (`https://kuna.bridgeaxis-consulting.de` — also
 reachable as the GitHub Pages default URL while DNS/TLS is being fixed).
 
 The intent is to move governance from "Copilot/assistant remembers to run
@@ -120,11 +120,11 @@ What it checks, for each target URL:
 | Label          | URL                                                              | Required?       |
 |----------------|------------------------------------------------------------------|-----------------|
 | pages-default  | https://lglenz.github.io/kuna-beauty-salon-website/              | no (warn-only)  |
-| custom-domain  | https://kuna.elbconsultingtech.com                               | no (warn-only)  |
+| custom-domain  | https://kuna.bridgeaxis-consulting.de                               | no (warn-only)  |
 
 Both targets are **warn-only** today (2026-05-22) because:
 
-1. DNS for `kuna.elbconsultingtech.com` still resolves to the legacy ELB
+1. DNS for `kuna.bridgeaxis-consulting.de` still resolves to the legacy ELB
    origin (`75.126.104.x`) rather than to GitHub Pages, so TLS does not
    hand-shake and GitHub Pages cannot issue a certificate.
 2. GitHub Pages, when a custom domain is configured on a repository,
@@ -164,7 +164,7 @@ kuna   IN   CNAME   lglenz.github.io.
 ```
 
 Then, in this repo's GitHub Settings → Pages, confirm the custom domain is
-set to `kuna.elbconsultingtech.com` and tick "Enforce HTTPS" once the
+set to `kuna.bridgeaxis-consulting.de` and tick "Enforce HTTPS" once the
 certificate has been provisioned.
 
 ## 7. Operating principles
@@ -191,7 +191,7 @@ certificate has been provisioned.
 | Symptom                                          | Likely cause                                                       | Where to look |
 |--------------------------------------------------|--------------------------------------------------------------------|---------------|
 | Deployments tab is stale                         | A previous Pages workflow failed without recording a deployment.   | `deploy-pages.yml` run log + Settings → Environments → production. |
-| `kuna.elbconsultingtech.com` shows cert error    | CNAME not yet added in the elbconsultingtech.com zone, or TLS still being issued. | `site-health.yml` → `http-check` (custom-domain target, warn-only) + `dns-check` job summary. |
+| `kuna.bridgeaxis-consulting.de` shows cert error    | CNAME not yet added in the elbconsultingtech.com zone, or TLS still being issued. | `site-health.yml` → `http-check` (custom-domain target, warn-only) + `dns-check` job summary. |
 | `dns-check` job warns                            | Live DNS drifted from `dns/records.yaml`.                          | Parent DNS provider for elbconsultingtech.com + `scripts/check_dns.py` output in job summary. |
 | PR check `No-secrets / config sanity` fails      | A secret-shaped string was committed.                              | Job log lists the file and pattern. |
 
@@ -206,7 +206,7 @@ certificate has been provisioned.
 2. **Environment `production`** (Settings → Environments) — required reviewers
    and/or wait timer; restrict deployment branches to `main`.
 3. **GitHub Pages custom domain** (Settings → Pages) — confirm the value
-   `kuna.elbconsultingtech.com`; do NOT tick "Enforce HTTPS" until the
+   `kuna.bridgeaxis-consulting.de`; do NOT tick "Enforce HTTPS" until the
    certificate has been provisioned.
 4. **Parent DNS zone** (`elbconsultingtech.com`) — add the CNAME
    `kuna  IN  CNAME  lglenz.github.io.` and remove any A/AAAA records
