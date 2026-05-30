@@ -10,7 +10,7 @@ the right thing" to **mandatory, codified workflows enforced by GitHub
 branch protection, environments, and scheduled smoke tests**.
 
 This model mirrors the first-wave governance rollout used for
-[`LGLenz/bridgeaxis-consulting`](https://github.com/LGLenz/bridgeaxis-consulting/pull/23)
+[`LGLenz/kestura`](https://github.com/LGLenz/kestura/pull/23)
 and is intended to be reused across every static GitHub Pages property in
 the ELB portfolio.
 
