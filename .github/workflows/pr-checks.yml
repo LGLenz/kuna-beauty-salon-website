@@ -92,7 +92,7 @@ jobs:
       - name: Confirm CNAME matches expected custom domain
         run: |
           set -euo pipefail
-          expected="kuna.bridgeaxis-consulting.de"
+          expected="kuna-beauty.bridgeaxis-consulting.de"
           actual="$(tr -d '[:space:]' < CNAME)"
           if [ "$actual" != "$expected" ]; then
             echo "::error file=CNAME::CNAME contents '$actual' do not match expected custom domain '$expected'"
@@ -245,10 +245,10 @@ jobs:
           while IFS= read -r url; do
             [ -z "$url" ] && continue
             case "$url" in
-              https://kuna.bridgeaxis-consulting.de*) ;;
+              https://kuna-beauty.bridgeaxis-consulting.de*) ;;
               *) continue ;;
             esac
-            path="${url#https://kuna.bridgeaxis-consulting.de/}"
+            path="${url#https://kuna-beauty.bridgeaxis-consulting.de/}"
             [ -z "$path" ] && path="index.html"
             case "$path" in
               */) path="${path}index.html" ;;

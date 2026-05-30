@@ -9,12 +9,12 @@ name: Site Health (Post-deploy + Scheduled)
 #
 # Targets:
 #   - https://lglenz.github.io/kuna-beauty-salon-website/  (Pages default URL — warn-only*)
-#   - https://kuna.bridgeaxis-consulting.de                   (custom domain — warn-only)
+#   - https://kuna-beauty.bridgeaxis-consulting.de                   (custom domain — warn-only)
 #
 # This workflow uses NO secrets and is read-only.
 #
 # IMPORTANT: BOTH targets are currently warn-only because:
-#   - The custom domain `kuna.bridgeaxis-consulting.de` still resolves to the
+#   - The custom domain `kuna-beauty.bridgeaxis-consulting.de` still resolves to the
 #     parent ELB origin (75.126.104.x) rather than `lglenz.github.io`,
 #     which means TLS will fail there until a CNAME is added in the
 #     elbconsultingtech.com zone.
@@ -91,7 +91,7 @@ jobs:
           - url: "https://lglenz.github.io/kuna-beauty-salon-website/"
             label: "pages-default"
             required: "false"
-          - url: "https://kuna.bridgeaxis-consulting.de"
+          - url: "https://kuna-beauty.bridgeaxis-consulting.de"
             label: "custom-domain"
             required: "false"
     steps:

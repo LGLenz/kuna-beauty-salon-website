@@ -69,7 +69,7 @@ protection and the `production` environment. The full design lives in
 | Label          | URL                                                              | Status                  |
 |----------------|------------------------------------------------------------------|-------------------------|
 | pages-default  | https://lglenz.github.io/kuna-beauty-salon-website/              | warn-only (DNS/TLS WIP) |
-| custom-domain  | https://kuna.bridgeaxis-consulting.de                               | warn-only (DNS/TLS WIP) |
+| custom-domain  | https://kuna-beauty.bridgeaxis-consulting.de                               | warn-only (DNS/TLS WIP) |
 
 The custom domain is warn-only until a `kuna  CNAME  lglenz.github.io.`
 record is added in the parent `elbconsultingtech.com` zone — see
@@ -79,7 +79,7 @@ record is added in the parent `elbconsultingtech.com` zone — see
 
 ```
 .
-├── CNAME                              # Custom domain: kuna.bridgeaxis-consulting.de
+├── CNAME                              # Custom domain: kuna-beauty.bridgeaxis-consulting.de
 ├── README.md
 ├── index.html                         # Single-page marketing site
 ├── .github/workflows/                 # PR checks, Pages deploy, site health
