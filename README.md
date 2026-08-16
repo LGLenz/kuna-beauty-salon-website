@@ -50,6 +50,9 @@ The project is part of the broader partnership framework under the **Mafrick Mun
 ## Related Projects
 
 - [mafrick-munene-advocates-website](https://github.com/LGLenz/mafrick-munene-advocates-website) — Legal & NGO partner website
+- [kestura-hub](https://github.com/LGLenz/kestura-hub) — Kestura group hub repository
+- [techvisaassist-website](https://github.com/LGLenz/techvisaassist-website) — IT consultancy and digital public services partner site
+- [@LGLenz repositories](https://github.com/LGLenz?tab=repositories) — Full public repository list for the wider ELB / Kestura portfolio
 - [ELB Consulting Tech](https://elbconsultingtech.com) — Parent consulting entity
 
 ## CI / CD and Deployment Governance
