@@ -13,7 +13,7 @@ The project is part of the broader partnership framework under the **Mafrick Mun
 - **Owner:** Inviolata Kuna Taaban (rep. Jacob Njiru)
 - **Business Name:** Kuna's Beauty Salon / KUSH Beauty Shop
 - **Focus:** Beauty & wellness center — haircare, skincare, nail services, spa
-- **Partnership Contact:** ELB Consulting Tech (elenz@elbconsultingtech.com)
+- **Partnership Contact:** ELB Consulting Tech (elias-lenz@elbconsultingtech.com)
 
 ## Project Scope
 
