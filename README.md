@@ -71,9 +71,12 @@ protection and the `production` environment. The full design lives in
 | pages-default  | https://lglenz.github.io/kuna-beauty-salon-website/              | warn-only (DNS/TLS WIP) |
 | custom-domain  | https://kushysbeautyhaven.com                               | warn-only (DNS/TLS WIP) |
 
-The custom domain is warn-only until a `kuna  CNAME  lglenz.github.io.`
-record is added in the parent `elbconsultingtech.com` zone — see
-[`dns/records.yaml`](dns/records.yaml) and §6 of the Operating Model.
+The DNS check reads [`dns/records.yaml`](dns/records.yaml) and currently
+validates `kuna.elbconsultingtech.com`; it does not verify
+`kushysbeautyhaven.com`. The tracked zone excerpt has a
+`bridgeaxis-consulting.de` origin, so confirm the authoritative zone and the
+custom-domain DNS mapping with the DNS owner before changing records. See §6
+of the Operating Model.
 
 ## Project Structure
 
@@ -85,7 +88,7 @@ record is added in the parent `elbconsultingtech.com` zone — see
 ├── .github/workflows/                 # PR checks, Pages deploy, site health
 ├── dns/
 │   ├── records.yaml                   # Machine-readable DNS source of truth
-│   └── elbconsultingtech.com.zone     # BIND-style excerpt (kuna subdomain)
+│   └── bridgeaxis-consulting.de.zone  # BIND-style reference excerpt
 ├── docs/
 │   └── Operating-Model.md             # CI/CD and deployment governance
 └── scripts/

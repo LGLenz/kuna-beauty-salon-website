@@ -143,29 +143,37 @@ When the scheduled run fails, an issue is opened with label `site-health`.
 
 ## 6. DNS source of truth
 
-The parent zone `elbconsultingtech.com` is managed **outside this
-repository** (ELB Consulting Tech parent infrastructure). The records
-this repo cares about are nevertheless captured in:
+The parent DNS zone is managed **outside this repository**. The machine-readable
+expectation consumed by the checker is:
 
-- `dns/elbconsultingtech.com.zone` — BIND-style excerpt (human-readable).
-- `dns/records.yaml` — machine-readable expectations consumed by
-  `scripts/check_dns.py`.
+- `dns/records.yaml` — `scripts/check_dns.py` reads this file and currently
+  checks `kuna.elbconsultingtech.com`.
 
-Keep them in sync. The `dns-check` job in `site-health.yml` diffs
-`dns/records.yaml` against live DNS and reports drift as a **warning**
-(not a failure) because the fix lives outside this repo.
+The tracked BIND-style excerpt is
+[`dns/bridgeaxis-consulting.de.zone`](../dns/bridgeaxis-consulting.de.zone);
+its `$ORIGIN` is `bridgeaxis-consulting.de`, not `elbconsultingtech.com`.
+It is not the zone excerpt for the checker's current expectation. Also, the
+checker does not validate the live `kushysbeautyhaven.com` custom-domain
+target. Confirm the authoritative zone and intended mapping with the DNS owner
+before changing DNS; until then, treat the YAML as the checker's expectation
+and the checked-in zone file as a separate reference. The `dns-check` job
+reports drift as a **warning** (not a failure) because the DNS change is
+outside this repository.
 
-### The fix needed
+### DNS records to verify
 
-Add this record in the elbconsultingtech.com zone (single CNAME):
+The current checker expects this record in the authoritative
+`elbconsultingtech.com` zone:
 
 ```dns
 kuna   IN   CNAME   lglenz.github.io.
 ```
 
-Then, in this repo's GitHub Settings → Pages, confirm the custom domain is
-set to `kushysbeautyhaven.com` and tick "Enforce HTTPS" once the
-certificate has been provisioned.
+This expectation is for `kuna.elbconsultingtech.com`; do not assume it
+configures `kushysbeautyhaven.com`. Verify the latter's DNS separately. In this
+repo's GitHub Settings → Pages, confirm the custom domain is set to
+`kushysbeautyhaven.com` and tick "Enforce HTTPS" once the certificate has
+been provisioned.
 
 ## 7. Operating principles
 
@@ -208,9 +216,11 @@ certificate has been provisioned.
 3. **GitHub Pages custom domain** (Settings → Pages) — confirm the value
    `kushysbeautyhaven.com`; do NOT tick "Enforce HTTPS" until the
    certificate has been provisioned.
-4. **Parent DNS zone** (`elbconsultingtech.com`) — add the CNAME
-   `kuna  IN  CNAME  lglenz.github.io.` and remove any A/AAAA records
-   for the `kuna` host that point at the legacy origin.
+4. **Parent DNS zone** — confirm the authoritative zone and intended mapping
+   for `kushysbeautyhaven.com` with the DNS owner. The current checker
+   expectation is `kuna  IN  CNAME  lglenz.github.io.` in
+   `elbconsultingtech.com`; do not treat the separate
+   `bridgeaxis-consulting.de` zone excerpt as authoritative for it.
 5. Once steps 3–4 are complete, flip the `custom-domain` target in
    `.github/workflows/site-health.yml` from `required: "false"` to
    `required: "true"`.
