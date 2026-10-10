@@ -199,7 +199,7 @@ been provisioned.
 | Symptom                                          | Likely cause                                                       | Where to look |
 |--------------------------------------------------|--------------------------------------------------------------------|---------------|
 | Deployments tab is stale                         | A previous Pages workflow failed without recording a deployment.   | `deploy-pages.yml` run log + Settings → Environments → production. |
-| `kushysbeautyhaven.com` shows cert error    | CNAME not yet added in the elbconsultingtech.com zone, or TLS still being issued. | `site-health.yml` → `http-check` (custom-domain target, warn-only) + `dns-check` job summary. |
+| `kushysbeautyhaven.com` shows cert error    | Custom-domain DNS/TLS issue; the DNS check only validates `kuna.elbconsultingtech.com` and does not establish the custom domain's DNS state. | Verify DNS with the DNS owner; inspect `site-health.yml` → `http-check` (custom-domain target, warn-only). |
 | `dns-check` job warns                            | Live DNS drifted from `dns/records.yaml`.                          | Parent DNS provider for elbconsultingtech.com + `scripts/check_dns.py` output in job summary. |
 | PR check `No-secrets / config sanity` fails      | A secret-shaped string was committed.                              | Job log lists the file and pattern. |
 
