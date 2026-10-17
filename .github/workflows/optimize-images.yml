@@ -1,0 +1,70 @@
+name: Optimize gallery images
+
+# Automatically resizes gallery source images and generates WebP + AVIF
+# variants whenever a JPEG/PNG under assets/gallery/ changes.
+#
+# Workflow:
+#   1. You push (or merge) a new/updated .jpg/.png into assets/gallery/.
+#   2. This job resizes it (longest edge <= 1000px) and generates .webp + .avif
+#      next to it using scripts/optimize-gallery.sh.
+#   3. If anything changed, it commits the optimized variants back to the branch.
+#
+# The <picture> tags in index.html reference the .avif / .webp / .jpg trio,
+# so new images are served in next-gen formats with a JPEG fallback with no
+# further manual work.
+
+on:
+  push:
+    paths:
+      - "assets/gallery/**.jpg"
+      - "assets/gallery/**.jpeg"
+      - "assets/gallery/**.png"
+      - "scripts/optimize-gallery.sh"
+      - ".github/workflows/optimize-images.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: optimize-images-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  optimize:
+    name: Resize + generate WebP/AVIF
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ImageMagick with AVIF + WebP support
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick libavif-bin webp
+          # Provide a `magick` alias if only `convert` is present (Ubuntu ships IM6).
+          if ! command -v magick >/dev/null 2>&1; then
+            echo "#!/usr/bin/env bash" | sudo tee /usr/local/bin/magick >/dev/null
+            echo 'exec convert "$@"' | sudo tee -a /usr/local/bin/magick >/dev/null
+            sudo chmod +x /usr/local/bin/magick
+          fi
+          magick -version | head -1
+          magick -list format | grep -iE "avif|webp" | head -2 || true
+
+      - name: Optimize gallery
+        run: |
+          chmod +x scripts/optimize-gallery.sh
+          scripts/optimize-gallery.sh assets/gallery
+
+      - name: Commit optimized variants
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain assets/gallery)" ]; then
+            git add assets/gallery
+            git commit -m "chore(images): auto-generate WebP/AVIF gallery variants [skip ci]"
+            git push
+            echo "Committed optimized gallery variants."
+          else
+            echo "No image changes to commit."
+          fi
