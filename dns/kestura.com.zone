@@ -1,22 +1,19 @@
 ;; DNS records relevant to the Kuna site, excerpted from the parent
-;; bridgeaxis-consulting.de zone (NOT authoritative — the parent zone is
+;; kestura.com zone (NOT authoritative — the parent zone is
 ;; managed outside this repository).
 ;;
 ;; Authoritative management: ELB Consulting Tech parent infrastructure.
 ;; Replicate the change below into the parent provider's control panel to
 ;; bring the custom domain online.
 ;;
-;; Expected change to bring https://kushysbeautyhaven.com on-line via
+;; Expected change to bring https://kushysbeautyhaven.com online via
 ;; GitHub Pages (LGLenz/kuna-beauty-salon-website):
 
-$ORIGIN	bridgeaxis-consulting.de.
-$TTL	3600
+$ORIGIN kestura.com.
+$TTL 3600
 
 ; --- Kuna subdomain ---
 ; Replaces any prior A/AAAA record for `kuna` with a single CNAME to the
 ; GitHub Pages user site. GitHub Pages will then issue a managed TLS
 ; certificate for kushysbeautyhaven.com via Let's Encrypt.
-kuna	IN	CNAME	lglenz.github.io.
-
-;; NOTE: the apex (`bridgeaxis-consulting.de`) and other subdomains are not
-;; managed here. Only the `kuna` record is in scope for this repository.
+kuna IN CNAME lglenz.github.io.
