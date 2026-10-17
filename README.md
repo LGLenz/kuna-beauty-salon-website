@@ -94,4 +94,4 @@ record is added in the parent `elbconsultingtech.com` zone — see
 ```
 
 ---
-*Managed by ELB Consulting Tech · elenz@elbconsultingtech.com*
+*Managed by ELB Consulting Tech · elias-lenz@elbconsultingtech.com*
