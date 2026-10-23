@@ -1,0 +1,15 @@
+{
+  "name": "Kuna's Beauty Salon",
+  "short_name": "Kuna's Beauty",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fdf6f0",
+  "theme_color": "#4a1942",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
